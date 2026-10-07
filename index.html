@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Engebon Engenharia | Construtora em Chapecó: obras entregues no prazo</title>
+<meta name="description" content="Construtora com mais de 13 anos, mais de 50 obras e 200 mil m² construídos. Obras industriais, comerciais, corporativas e residências de alto padrão, do projeto à chave na mão.">
+<link rel="canonical" href="https://www.engebon.eng.br/">
+<meta property="og:title" content="Engebon Engenharia | Obras entregues no prazo">
+<meta property="og:description" content="Mais de 50 obras e 200 mil m² construídos em 12 cidades. Do projeto à chave na mão.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.engebon.eng.br/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300..800&display=swap" rel="stylesheet">
+
+<style>
+/* ===== Tokens: trocar aqui quando as cores oficiais da marca forem confirmadas ===== */
+:root{
+  --tinta:#272320;      /* grafite do site atual: fundos escuros e texto */
+  --aco:#5A5653;        /* texto secundário */
+  --concreto:#EDEDED;   /* cinza claro das seções */
+  --linha:#DCDCDC;
+  --branco:#FFFFFF;
+  --sinal:#EB5634;      /* laranja Engebon: botões e faixa de chamada */
+  --sinal-escuro:#D2431F;
+  --laranja-claro:#F48732; /* segundo tom do logo */
+  --largura:1200px;
+  --raio:0px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Nunito Sans","Avenir Next","Avenir",system-ui,sans-serif;color:var(--tinta);background:var(--branco);line-height:1.55;font-size:17px}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--laranja-claro);outline-offset:3px}
+.contato :focus-visible{outline-color:var(--tinta)}
+.contem{max-width:var(--largura);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-weight:700;line-height:1.12;letter-spacing:.005em}
+h2{font-size:clamp(1.9rem,4.2vw,3.1rem);max-width:18ch}
+h3{font-size:1.3rem;line-height:1.2}
+.apoio{color:var(--aco);max-width:58ch;margin-top:16px;font-size:1.08rem}
+
+.botao{display:inline-block;padding:16px 26px;border-radius:var(--raio);font-weight:600;letter-spacing:.08em;text-decoration:none;font-size:.95rem;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:background .15s,color .15s}
+.botao-sinal{background:var(--sinal);color:var(--branco)}
+.botao-sinal:hover{background:var(--sinal-escuro)}
+.botao-vazado{border-color:var(--branco);color:var(--branco)}
+.botao-vazado:hover{background:var(--branco);color:var(--tinta)}
+.botao-tinta{background:var(--tinta);color:var(--branco)}
+.botao-tinta:hover{background:#000}
+.botao-escuro{background:#3B3B3B;color:var(--branco)}
+.botao-escuro:hover{background:var(--tinta)}
+
+/* ===== Cabeçalho ===== */
+.topo{position:sticky;top:0;z-index:50;background:var(--branco);border-bottom:1px solid var(--linha)}
+.topo .contem{display:flex;align-items:center;justify-content:space-between;height:76px}
+.topo img{height:52px;width:auto}
+.menu{display:flex;align-items:center;gap:34px;list-style:none}
+.menu a{text-decoration:none;font-weight:400;letter-spacing:.07em}
+.menu a:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+.menu .botao{padding:11px 20px}
+.menu .botao:hover{text-decoration:none}
+.abre-menu{display:none;background:none;border:0;padding:10px;cursor:pointer}
+.abre-menu span{display:block;width:26px;height:3px;background:var(--tinta);margin:5px 0}
+
+/* ===== Vídeo de fundo (padrão usado no hero e nos painéis) ===== */
+.fundo-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slot{display:none}
+.rascunho .slot{display:block;position:absolute;top:12px;right:12px;z-index:3;background:#FFE066;color:#000;font-size:.78rem;font-weight:700;padding:6px 10px;border-radius:var(--raio);max-width:240px;line-height:1.3}
+
+/* ===== Hero ===== */
+.hero{position:relative;min-height:min(88vh,820px);display:flex;align-items:flex-end;background:var(--tinta);color:var(--branco);overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,16,.25) 0%,rgba(20,18,16,.55) 45%,rgba(20,18,16,.94) 100%)}
+.hero .contem{position:relative;z-index:2;width:100%;padding-top:120px;padding-bottom:64px}
+.hero h1{font-size:clamp(2.3rem,6vw,4.6rem);max-width:15ch}
+.hero p{font-size:clamp(1.05rem,1.6vw,1.3rem);max-width:50ch;margin-top:22px;color:#E3E7EA}
+.hero .acoes{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero h1,.hero p,.hero .acoes{opacity:0;transform:translateY(18px);animation:sobe .7s cubic-bezier(.2,.7,.2,1) forwards}
+.hero p{animation-delay:.15s}.hero .acoes{animation-delay:.3s}
+@keyframes sobe{to{opacity:1;transform:none}}
+
+/* ===== Números ===== */
+.numeros{background:linear-gradient(90deg,#000,#333);color:var(--branco);border-top:1px solid rgba(255,255,255,.14)}
+.numeros .contem{display:grid;grid-template-columns:repeat(4,1fr)}
+.numero{padding:30px 24px 34px 0}
+.numero + .numero{padding-left:24px;border-left:1px solid rgba(255,255,255,.14)}
+.numero strong{display:block;font-size:clamp(1.45rem,3.3vw,3rem);white-space:nowrap;font-weight:800;line-height:1;color:var(--branco)}
+.numero span{display:block;margin-top:8px;color:#C9D0D6}
+
+/* ===== Bifurcação ===== */
+.caminhos{padding:96px 0 0}
+.caminhos-grade{display:grid;grid-template-columns:1fr 1fr;margin-top:48px}
+.caminho{position:relative;min-height:640px;color:var(--branco);background:var(--tinta);overflow:hidden;display:flex;align-items:flex-end}
+.caminho::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,16,.35),rgba(20,18,16,.93) 62%)}
+.caminho-corpo{position:relative;z-index:2;padding:88px clamp(24px,4vw,56px) 48px;width:100%}
+.caminho h3{font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.05}
+.caminho p{margin-top:14px;max-width:44ch;color:#E3E7EA}
+.lista-links{list-style:none;margin:26px 0 30px;border-top:1px solid rgba(255,255,255,.25)}
+.lista-links li{border-bottom:1px solid rgba(255,255,255,.25)}
+.lista-links a{display:flex;justify-content:space-between;gap:16px;padding:14px 0;text-decoration:none;font-weight:600}
+.lista-links a:hover{color:var(--laranja-claro)}
+.lista-links small{font-weight:400;color:#C9D0D6;font-size:.92rem;text-align:right}
+
+/* ===== Obras ===== */
+.obras{padding:104px 0}
+.obras-topo{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.obras-grade{display:grid;grid-template-columns:1.35fr 1fr;gap:20px;margin-top:48px}
+.obras-coluna{display:grid;gap:20px}
+.obra{position:relative;display:block;background:var(--tinta);color:var(--branco);text-decoration:none;overflow:hidden;border-radius:var(--raio);min-height:230px}
+.obra-grande{min-height:520px}
+.obra img,.obra video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.obra:hover img{transform:scale(1.04)}
+.obra::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(20,18,16,.92))}
+.obra-info{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px 24px}
+.obra-info strong{display:block;font-size:1.25rem;line-height:1.15}
+.obra-grande .obra-info strong{font-size:1.9rem}
+.obra-info span{display:block;margin-top:6px;color:#DDE2E6}
+.obra-info .etiqueta{display:inline-block;margin-top:0;color:var(--branco)}
+.etiqueta{display:inline-block;background:var(--sinal);color:var(--branco);font-size:.82rem;font-weight:700;padding:4px 9px;border-radius:var(--raio);margin-bottom:10px}
+
+/* ===== Método ===== */
+.metodo{background:var(--concreto);padding:104px 0}
+.metodo-grade{display:grid;grid-template-columns:1fr 1.25fr;gap:64px;align-items:start}
+.metodo-fixo{position:sticky;top:110px}
+.metodo-lista{list-style:none}
+.metodo-lista li{padding:26px 0;border-top:2px solid var(--tinta)}
+.metodo-lista li:last-child{border-bottom:2px solid var(--tinta)}
+.metodo-lista p{color:var(--aco);margin-top:8px;max-width:56ch}
+
+/* ===== Faixa de vídeo ===== */
+.faixa{position:relative;min-height:70vh;background:var(--tinta);color:var(--branco);display:flex;align-items:center;overflow:hidden}
+.faixa::after{content:"";position:absolute;inset:0;background:rgba(20,18,16,.62)}
+.faixa .contem{position:relative;z-index:2;width:100%;padding-top:80px;padding-bottom:80px}
+.faixa blockquote{font-size:clamp(1.8rem,4.6vw,3.6rem);font-weight:800;line-height:1.08;max-width:20ch;letter-spacing:-.015em}
+.faixa p{margin-top:22px;max-width:48ch;color:#E3E7EA}
+
+/* ===== Parceiros ===== */
+.parceiros{padding:80px 0;overflow:hidden}
+.parceiros h2{font-size:1.5rem;max-width:none}
+.esteira{display:flex;gap:56px;width:max-content;margin-top:36px;animation:corre 46s linear infinite}
+.esteira:hover{animation-play-state:paused}
+.esteira img{height:64px;width:160px;object-fit:contain;opacity:.8}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+/* ===== Contato ===== */
+.contato{background:var(--sinal);color:var(--branco);padding:104px 0}
+.contato-grade{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.contato .apoio{color:#FFF}
+.contato-direto{margin-top:32px;display:grid;gap:10px}
+.contato-direto a{color:var(--branco);font-weight:600;text-underline-offset:5px}
+.formulario{background:var(--branco);color:var(--tinta);padding:32px;border-radius:var(--raio);display:grid;gap:18px}
+.formulario label{display:grid;gap:7px;font-weight:600;font-size:.95rem}
+.formulario input,.formulario select{font:inherit;padding:14px;border:2px solid var(--linha);border-radius:var(--raio);background:var(--branco);color:var(--tinta);width:100%}
+.formulario input:focus,.formulario select:focus{border-color:var(--tinta);outline:none}
+.formulario .botao{width:100%;font-size:1.05rem}
+.formulario small{color:var(--aco)}
+
+/* ===== Rodapé ===== */
+.rodape{padding:64px 0 32px;border-top:1px solid var(--linha)}
+.rodape-grade{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.rodape img{height:64px;width:auto}
+.rodape h4{font-size:1rem;margin-bottom:14px}
+.rodape ul{list-style:none;display:grid;gap:9px}
+.rodape a{text-decoration:none;color:var(--aco)}
+.rodape a:hover{color:var(--tinta);text-decoration:underline}
+.rodape-fim{margin-top:48px;padding-top:24px;border-top:1px solid var(--linha);color:var(--aco);font-size:.9rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ===== WhatsApp fixo ===== */
+.zap{position:fixed;right:18px;bottom:18px;z-index:60;background:#25D366;color:#073B1C;font-weight:700;text-decoration:none;padding:14px 20px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+
+/* ===== Responsivo ===== */
+@media (max-width:900px){
+  .abre-menu{display:block}
+  .menu{display:none;position:absolute;left:0;right:0;top:76px;background:var(--branco);flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 24px;border-bottom:1px solid var(--linha)}
+  .menu.aberto{display:flex}
+  .menu li{padding:14px 0;border-bottom:1px solid var(--linha)}
+  .menu li:last-child{border:0;padding-top:20px}
+  .menu .botao{display:block;text-align:center}
+  .numeros .contem{grid-template-columns:1fr 1fr}
+  .numero{padding:24px 12px 24px 0}
+  .numero + .numero{padding-left:0;border-left:0}
+  .numero:nth-child(even){padding-left:20px;border-left:1px solid rgba(255,255,255,.14)}
+  .numero:nth-child(n+3){border-top:1px solid rgba(255,255,255,.14)}
+  .caminhos{padding-top:72px}
+  .caminhos-grade,.obras-grade,.metodo-grade,.contato-grade{grid-template-columns:1fr}
+  .caminho{min-height:560px}
+  .obras,.metodo,.contato{padding:72px 0}
+  .obra-grande{min-height:380px}
+  .metodo-grade,.contato-grade{gap:40px}
+  .metodo-fixo{position:static}
+  .rodape-grade{grid-template-columns:1fr 1fr;gap:32px 20px}
+  .rodape-grade > div{min-width:0;overflow-wrap:anywhere}
+  .hero .acoes .botao{width:100%;text-align:center}
+  .formulario{padding:22px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero h1,.hero p,.hero .acoes{animation:none;opacity:1;transform:none}
+  .esteira{animation:none;flex-wrap:wrap;width:auto}
+  .obra img{transition:none}
+}
+</style>
+</head>
+
+<!-- A classe "rascunho" mostra as etiquetas amarelas indicando qual vídeo entra em cada espaço.
+     Remover a classe antes de publicar. -->
+<body class="rascunho">
+
+<header class="topo">
+  <div class="contem">
+    <a href="index.html" aria-label="Engebon, página inicial">
+      <img src="assets/logo.png" alt="Engebon Engenharia" width="663" height="201">
+    </a>
+    <button class="abre-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="portfolio.html">Portfólio</a></li>
+      <li><a href="sobre-nos.html">Sobre nós</a></li>
+      <li><a class="botao botao-sinal" data-origem="menu" data-msg="Olá, vim pelo site da Engebon e gostaria de mais informações." href="#">Falar no WhatsApp</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <video class="fundo-video" autoplay muted loop playsinline preload="metadata"
+         poster="assets/hero-poster.jpg">
+    <source src="videos/hero-vertical.mp4" type="video/mp4" media="(max-width:700px)">
+    <source src="videos/hero.mp4" type="video/mp4">
+  </video>
+  <div class="contem">
+    <h1>Mais de 50 obras entregues. Nenhuma com atraso.</h1>
+    <p>Há mais de 13 anos a Engebon constrói indústrias, prédios comerciais, sedes de empresas e casas de alto padrão, do projeto à chave na mão.</p>
+    <div class="acoes">
+      <a class="botao botao-sinal" href="#construir">Quero construir</a>
+      <a class="botao botao-vazado" href="#comprar">Quero comprar um imóvel Engebon</a>
+    </div>
+  </div>
+</section>
+
+<section class="numeros" aria-label="Engebon em números">
+  <div class="contem">
+    <div class="numero"><strong data-conta="13" data-prefixo="+">+13</strong><span>anos de mercado</span></div>
+    <div class="numero"><strong data-conta="50" data-prefixo="+">+50</strong><span>obras realizadas</span></div>
+    <div class="numero"><strong data-conta="200" data-prefixo="+" data-sufixo=" mil m²">+200 mil m²</strong><span>construídos</span></div>
+    <div class="numero"><strong data-conta="12">12</strong><span>cidades atendidas</span></div>
+  </div>
+</section>
+
+<!-- ============ BIFURCAÇÃO ============ -->
+<section class="caminhos">
+  <div class="contem">
+    <h2>O que você procura na Engebon?</h2>
+  </div>
+  <div class="caminhos-grade">
+
+    <article class="caminho" id="construir">
+      <span class="slot">Vídeo 2: canteiro em atividade, estrutura subindo (8 s, loop)</span>
+      <video class="fundo-video" data-lazy muted loop playsinline preload="none"
+             poster="assets/segmentos/industrial.webp">
+        <source data-src="videos/construir.mp4" type="video/mp4">
+      </video>
+      <div class="caminho-corpo">
+        <h3>Tenho uma obra para construir</h3>
+        <p>Você entrega o projeto ou a ideia. Nós devolvemos a obra pronta para uso, com cronograma acompanhado etapa por etapa.</p>
+        <ul class="lista-links">
+          <li><a href="construcoes-industriais.html">Industrial <small>Galpões, barracões, cooperativas</small></a></li>
+          <li><a href="construcoes-comerciais.html">Comercial <small>Lojas, clínicas, mercados</small></a></li>
+          <li><a href="construcoes-corporativas.html">Corporativo <small>Sedes e escritórios</small></a></li>
+          <li><a href="construcoes-residenciais.html">Residencial <small>Casas de alto padrão</small></a></li>
+        </ul>
+        <a class="botao botao-sinal" data-origem="home-construir" data-msg="Olá, vim pelo site da Engebon. Tenho uma obra para construir e quero um orçamento." href="#">Pedir orçamento da minha obra</a>
+      </div>
+    </article>
+
+    <article class="caminho" id="comprar">
+      <span class="slot">Vídeo 3: passeio por uma residência pronta ou aéreo do condomínio (8 s, loop)</span>
+      <video class="fundo-video" data-lazy muted loop playsinline preload="none"
+             poster="assets/segmentos/residencial.webp">
+        <source data-src="videos/comprar.mp4" type="video/mp4">
+      </video>
+      <div class="caminho-corpo">
+        <h3>Quero comprar um imóvel Engebon</h3>
+        <p>Residências de alto padrão em condomínios fechados, na planta ou em construção, com o mesmo padrão de execução das nossas obras.</p>
+        <ul class="lista-links">
+          <li><a href="portfolio.html#a-venda">Condomínio Real Park <small>Chapecó, SC</small></a></li>
+          <li><a href="portfolio.html#a-venda">Monticiano Residenza <small>Chapecó, SC</small></a></li>
+          <li><a href="portfolio.html#a-venda">Viva Park <small>Porto Belo, SC</small></a></li>
+        </ul>
+        <a class="botao botao-sinal" data-origem="home-comprar" data-msg="Olá, vim pelo site da Engebon. Quero saber mais sobre as residências à venda." href="#">Ver valores e plantas</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ OBRAS ============ -->
+<section class="obras">
+  <div class="contem">
+    <div class="obras-topo">
+      <div>
+        <h2>Obras que já estão de pé</h2>
+        <p class="apoio">Uma amostra do que entregamos. No portfólio você encontra as obras concluídas, as que estão em andamento e os imóveis à venda na planta.</p>
+      </div>
+      <a class="botao botao-tinta" href="portfolio.html">Ver portfólio completo</a>
+    </div>
+
+    <div class="obras-grade">
+      <a class="obra obra-grande" href="cooper-a1-ametista-do-sul-rs.html">
+        <span class="slot">Vídeo 4 (opcional): aéreo desta obra</span>
+        <img loading="lazy" src="assets/obras/cooper-a1-ametista-do-sul.webp" alt="Unidade da Cooper A1 em Ametista do Sul, RS">
+        <div class="obra-info">
+          <span class="etiqueta">Industrial</span>
+          <strong>Cooper A1, Ametista do Sul (RS)</strong>
+          <span>4.650 m² construídos em 6 meses após a fundação</span>
+        </div>
+      </a>
+      <div class="obras-coluna">
+        <a class="obra" href="cooper-a1-tenente-portela-rs.html">
+          <img loading="lazy" src="assets/obras/cooper-a1-tenente-portela.webp" alt="Unidade da Cooper A1 em Tenente Portela, RS">
+          <div class="obra-info"><span class="etiqueta">Industrial</span><strong>Cooper A1, Tenente Portela (RS)</strong><span>4.100 m² de área construída</span></div>
+        </a>
+        <a class="obra" href="cooper-a1-cristal-do-sul-rs.html">
+          <img loading="lazy" src="assets/obras/cooper-a1-cristal-do-sul.webp" alt="Unidade da Cooper A1 em Cristal do Sul, RS">
+          <div class="obra-info"><span class="etiqueta">Industrial</span><strong>Cooper A1, Cristal do Sul (RS)</strong><span>3.000 m² de área construída</span></div>
+        </a>
+        <!-- Endereço antigo (/ed-comercial-residencial-tenente-portela-rs) deve redirecionar para este -->
+        <a class="obra" href="ed-comercial-residencial-ametista-do-sul-rs.html">
+          <img loading="lazy" src="assets/obras/edificio-ametista-do-sul.webp" alt="Edifício comercial e residencial em Ametista do Sul, RS">
+          <div class="obra-info"><span class="etiqueta">Comercial e residencial</span><strong>Edifício em Ametista do Sul (RS)</strong><span>2.500 m² de área construída</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÉTODO ============ -->
+<section class="metodo">
+  <div class="contem metodo-grade">
+    <div class="metodo-fixo">
+      <h2>Por que nossas obras não atrasam</h2>
+      <p class="apoio">Prazo não é promessa, é controle. Cada obra da Engebon roda com as mesmas cinco rotinas, e você acompanha todas elas.</p>
+      <p style="margin-top:28px"><a class="botao botao-tinta" href="sobre-nos.html">Conhecer a Engebon</a></p>
+    </div>
+    <ul class="metodo-lista">
+      <li><h3>Cronograma Gantt acompanhado em tempo real</h3><p>Cada etapa tem data de início e de fim. Comparamos o planejado com o executado durante toda a obra, o que evita atraso e retrabalho.</p></li>
+      <li><h3>Diário de obra todos os dias</h3><p>Registro diário dos serviços, com controle técnico das concretagens e histórico completo de cada etapa.</p></li>
+      <li><h3>Mapeamentos técnicos</h3><p>Controle preciso de impermeabilização, contrapisos, revestimentos, grelhas, drenos e utilidades, conforme a necessidade de cada obra.</p></li>
+      <li><h3>Burocracia e tributos por nossa conta</h3><p>Cuidamos dos trâmites em cartório e da emissão das guias de ISS e INSS, além das demais obrigações administrativas e legais.</p></li>
+      <li><h3>Procedimento operacional padronizado</h3><p>Todas as fases seguem o mesmo padrão de execução, com rastreabilidade e conformidade com as normas técnicas.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ FAIXA DE VÍDEO ============ -->
+<section class="faixa">
+  <span class="slot">Vídeo 5: sequência de takes de várias obras (15 s, loop)</span>
+  <video class="fundo-video" data-lazy muted loop playsinline preload="none"
+         poster="assets/segmentos/corporativo.webp">
+    <source data-src="videos/obras.mp4" type="video/mp4">
+  </video>
+  <div class="contem">
+    <blockquote>Você segue tocando o seu negócio. A obra fica com a gente.</blockquote>
+    <p>Trabalhamos no modelo chave na mão: projeto, execução, documentação e entrega em um único contrato, com um único responsável.</p>
+  </div>
+</section>
+
+<!-- ============ PARCEIROS ============ -->
+<section class="parceiros">
+  <div class="contem"><h2>Parceiros que constroem com a gente</h2></div>
+  <div class="esteira" id="esteira" aria-label="Logotipos de parceiros">
+    <img alt="Adagil" src="assets/parceiros/adagil.png">
+    <img alt="Rezzadori" src="assets/parceiros/rezzadori.png">
+    <img alt="Girardi Casa e Construção" src="assets/parceiros/girardi.png">
+    <img alt="Zaliah" src="assets/parceiros/zaliah.png">
+    <img alt="Motion" src="assets/parceiros/motion.png">
+    <img alt="Weiku" src="assets/parceiros/weiku.png">
+    <img alt="Nexplan Arquitetura Integrada" src="assets/parceiros/nexplan.png">
+    <img alt="Gerdau" src="assets/parceiros/gerdau.png">
+    <img alt="Concrebal" src="assets/parceiros/concrebal.png">
+    <img alt="Pormade Portas" src="assets/parceiros/pormade.png">
+    <img alt="Multi Aquecimento e Energia" src="assets/parceiros/multi.png">
+    <img alt="Rotesma" src="assets/parceiros/rotesma.png">
+    <img alt="Eocaplan" src="assets/parceiros/eocaplan.png">
+    <img alt="Distrisul" src="assets/parceiros/distrisul.png">
+    <img alt="Pavimenti" src="assets/parceiros/pavimenti.png">
+  </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section class="contato" id="contato">
+  <div class="contem contato-grade">
+    <div>
+      <h2>Conte o que você precisa. Respondemos no mesmo dia útil.</h2>
+      <p class="apoio">Três informações bastam para a gente começar a conversa já sabendo do que se trata.</p>
+      <div class="contato-direto">
+        <a data-origem="contato-direto" data-msg="Olá, vim pelo site da Engebon e gostaria de mais informações." href="#">WhatsApp (49) 98864-5445</a>
+        <a href="mailto:direcao@engebon.eng.br">direcao@engebon.eng.br</a>
+        <a href="https://www.instagram.com/engebon2020" target="_blank" rel="noopener">Instagram @engebon2020</a>
+      </div>
+    </div>
+    <form class="formulario" id="formulario">
+      <label>Seu nome
+        <input type="text" name="nome" autocomplete="name" required>
+      </label>
+      <label>O que você procura?
+        <select name="interesse" required>
+          <option value="">Selecione</option>
+          <option>Construir galpão ou indústria</option>
+          <option>Construir prédio comercial</option>
+          <option>Construir sede ou escritório</option>
+          <option>Construir casa de alto padrão</option>
+          <option>Comprar um imóvel Engebon</option>
+        </select>
+      </label>
+      <label>Cidade da obra ou do imóvel
+        <input type="text" name="cidade" autocomplete="address-level2" required>
+      </label>
+      <button class="botao botao-escuro" type="submit">Enviar pelo WhatsApp</button>
+      <small>Ao enviar, seu WhatsApp abre com a mensagem pronta. É só confirmar.</small>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="contem">
+    <div class="rodape-grade">
+      <div>
+        <img src="assets/logo.png" alt="Engebon Engenharia" width="663" height="201">
+        <p style="margin-top:14px;color:var(--aco);max-width:30ch">Obras industriais, comerciais, corporativas e residenciais, do projeto à chave na mão.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="portfolio.html">Portfólio</a></li>
+          <li><a href="sobre-nos.html">Sobre nós</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>O que construímos</h4>
+        <ul>
+          <li><a href="construcoes-industriais.html">Industrial</a></li>
+          <li><a href="construcoes-comerciais.html">Comercial</a></li>
+          <li><a href="construcoes-corporativas.html">Corporativo</a></li>
+          <li><a href="construcoes-residenciais.html">Residencial</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a data-origem="rodape" data-msg="Olá, vim pelo site da Engebon e gostaria de mais informações." href="#">(49) 98864-5445</a></li>
+          <li><a href="mailto:direcao@engebon.eng.br">direcao@engebon.eng.br</a></li>
+          <li><a href="https://www.instagram.com/engebon2020" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape-fim">
+      <span>© Engebon. Todos os direitos reservados. 2026.</span>
+      <span>Site desenvolvido por <a href="https://oquirondigital.com.br/" target="_blank" rel="noopener">Oquíron Digital</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="zap" data-origem="botao-fixo" data-msg="Olá, vim pelo site da Engebon e gostaria de mais informações." href="#">WhatsApp</a>
+
+<script>
+(function(){
+  var FONE = "5549988645445";
+  window.dataLayer = window.dataLayer || [];
+
+  function linkZap(msg){ return "https://wa.me/" + FONE + "?text=" + encodeURIComponent(msg); }
+
+  /* Todos os links de WhatsApp: mensagem própria por posição + evento para GTM/GA4 */
+  document.querySelectorAll("[data-msg]").forEach(function(a){
+    a.href = linkZap(a.dataset.msg);
+    a.target = "_blank"; a.rel = "noopener";
+    a.addEventListener("click", function(){
+      dataLayer.push({event:"clique_whatsapp", origem:a.dataset.origem});
+    });
+  });
+
+  /* Formulário: monta a mensagem e abre o WhatsApp */
+  var form = document.getElementById("formulario");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var d = new FormData(form);
+    var msg = "Olá, vim pelo site da Engebon.\nNome: " + d.get("nome") +
+              "\nProcuro: " + d.get("interesse") + "\nCidade: " + d.get("cidade");
+    dataLayer.push({event:"envio_formulario", interesse:d.get("interesse")});
+    window.open(linkZap(msg), "_blank", "noopener");
+  });
+
+  /* Menu no celular */
+  var botao = document.querySelector(".abre-menu"), menu = document.getElementById("menu");
+  botao.addEventListener("click", function(){
+    var aberto = menu.classList.toggle("aberto");
+    botao.setAttribute("aria-expanded", aberto);
+  });
+
+  var semMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Vídeos abaixo da dobra: só carregam e tocam quando entram na tela */
+  if ("IntersectionObserver" in window){
+    var obsVideo = new IntersectionObserver(function(itens){
+      itens.forEach(function(i){
+        var v = i.target;
+        if (i.isIntersecting){
+          if (!v.dataset.carregado){
+            v.querySelectorAll("source[data-src]").forEach(function(s){ s.src = s.dataset.src; });
+            v.load(); v.dataset.carregado = "1";
+          }
+          if (!semMovimento){ var p = v.play(); if (p) p.catch(function(){}); }
+        } else { v.pause(); }
+      });
+    }, {rootMargin:"200px"});
+    document.querySelectorAll("video[data-lazy]").forEach(function(v){ obsVideo.observe(v); });
+
+    /* Contadores */
+    var obsNum = new IntersectionObserver(function(itens){
+      itens.forEach(function(i){
+        if (!i.isIntersecting) return;
+        var el = i.target; obsNum.unobserve(el);
+        if (semMovimento) return;
+        var fim = +el.dataset.conta, pre = el.dataset.prefixo || "", suf = el.dataset.sufixo || "", t0 = null;
+        function passo(t){
+          if (!t0) t0 = t;
+          var p = Math.min((t - t0) / 1100, 1);
+          el.textContent = pre + Math.round(fim * (1 - Math.pow(1 - p, 3))) + suf;
+          if (p < 1) requestAnimationFrame(passo);
+        }
+        requestAnimationFrame(passo);
+      });
+    }, {threshold:.6});
+    document.querySelectorAll("[data-conta]").forEach(function(el){ obsNum.observe(el); });
+  }
+  if (semMovimento){ document.querySelectorAll("video").forEach(function(v){ v.removeAttribute("autoplay"); v.pause(); }); }
+
+  /* Esteira de parceiros: duplica os logos para o loop contínuo */
+  var esteira = document.getElementById("esteira");
+  if (!semMovimento) esteira.innerHTML += esteira.innerHTML;
+})();
+</script>
+</body>
+</html>
